@@ -1,0 +1,82 @@
+#loading {
+  z-index: 1000;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  -webkit-animation: fadeIn 1s 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.wrap {
+  -webkit-animation: translate 1000ms infinite ease-in-out alternate, zindex 2000ms infinite ease-in-out;
+  position: absolute;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+  box-shadow: -5px -5px 0 rgba(0, 0, 0, 0.15) inset;
+  background-color: #E3746B;
+  border-radius: 50%;
+  -webkit-animation: scale 1000ms infinite ease-in-out alternate;
+  -webkit-animation-delay: -500ms;
+  -webkit-transform: scale(0.5);
+  border: 2px solid black;
+}
+.ball:after {
+  content: '';
+  width: 50px;
+  height: 13px;
+  background: #eee;
+  position: absolute;
+  top: 70px;
+  border-radius: 50%;
+}
+#wrap2 {
+  -webkit-animation-delay: -1000ms;
+}
+#ball2 {
+  background-color: #397BF9;
+  -webkit-animation-delay: -1500ms;
+}
+#wrap3 {
+  -webkit-animation-delay: -1500ms;
+}
+#ball3 {
+  background-color: #F4B400;
+  -webkit-animation-delay: -2000ms;
+}
+#wrap4 {
+  -webkit-animation-delay: -2500ms;
+}
+#ball4 {
+  background-color: #0F9D58;
+  -webkit-animation-delay: -3000ms;
+}
+@-webkit-keyframes translate {
+  100% {
+    -webkit-transform: translateX(100px);
+  }
+}
+@-webkit-keyframes scale {
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-webkit-keyframes zindex {
+  25% {
+    z-index: 1;
+  }
+  75% {
+    z-index: -1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}

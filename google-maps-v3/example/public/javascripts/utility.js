@@ -4,10 +4,10 @@
 
         this.spinner = {
             on: function () {
-                $('.loading').show();
+                $('#loading').show();
             },
             off: function () {
-                $('.loading').hide();
+                $('#loading').hide();
             }
         };
 

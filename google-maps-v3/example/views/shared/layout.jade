@@ -14,14 +14,22 @@ html
 
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+
   body(ng-app="myApp")
     .background-image
 
-    .loading
-        p Something running ...
+    #loading
+        #wrap1.wrap
+            #ball1.ball
+        #wrap2.wrap
+            #ball2.ball
+        #wrap3.wrap
+            #ball3.ball
+        #wrap4.wrap
+            #ball4.ball
 
-    .container
-        block content
+      .container
+          block content
 
     footer
         p Company Name Here
