@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -12,7 +12,7 @@ var app = module.exports = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.locals.pretty = true; // jade pretty
-app.use(favicon(__dirname + '/public/favicon.ico'));
+// app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -29,6 +29,7 @@ app.set('domain', 'http://localhost:3000');
 // Route
 // ==========================
 app.use('/', require('./routes/index'));
+app.use('/api', require('./routes/api'));
 
 // ==========================
 // Error Handler

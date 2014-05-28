@@ -1,5 +1,9 @@
 (function () {
 
+    myApp.run(['utility', function (utility) {
+        utility.spinner.off();
+    }]);
+
     myApp.controller('indexController', ['utility', function (utility) {
           var map,
               infowindow,
@@ -37,6 +41,8 @@
           }
 
           function initialMapAndSearchBar(mapId, searchId) {
+
+              utility.spinner.on();
 
               var pos = new google.maps.LatLng(25.0392179, 121.5398562);
               var mapOptions = {
