@@ -14,6 +14,9 @@ Collection of Building Web
 ###Hover effect###
 1. [ihover](https://github.com/gudh/ihover) - bootstrap 3 theme
 
+###Header Footer Fix###
+1. [headroom](https://github.com/WickyNilliams/headroom.js) - cool
+
 ###On scroll Animation###
 
 1. [scrollReveal](https://github.com/julianlloyd/scrollReveal.js)
