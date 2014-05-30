@@ -46,6 +46,9 @@ Collection of Building Web
 7. [toastr](http://codeseven.github.io/toastr/)
 8. [messenger](http://github.hubspot.com/messenger/)
 
+###Syntax Highlighter###
+1. [Prism](syntax highlighter)
+
 ###Loading###
 1. [pace](https://github.com/HubSpot/pace)
 2. [ngProgress](http://victorbjelkholm.github.io/ngProgress/) - angular solution
