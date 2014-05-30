@@ -67,6 +67,8 @@ Collection of Building Web
 1. [underscore](https://github.com/jashkenas/underscore)
 2. [lodash](https://github.com/lodash/lodash/)
 3. [multi-download](https://github.com/sindresorhus/multi-download) - Download multiple files at once
+4. [Sizzle](http://sizzlejs.com/) - DOM
+5. [DOMtastic](https://github.com/webpro/DOMtastic) - DOM
 
 ###DnD###
 1. [draggability](https://github.com/desandro/draggabilly) - pad
