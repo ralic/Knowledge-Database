@@ -76,6 +76,9 @@ Collection of Building Web
 4. [Sizzle](http://sizzlejs.com/) - DOM
 5. [DOMtastic](https://github.com/webpro/DOMtastic) - DOM
 
+###pdf viewer###
+1. [pdf.js](https://github.com/mozilla/pdf.js/) - awesome
+
 ###DnD###
 1. [draggability](https://github.com/desandro/draggabilly) - pad
 
