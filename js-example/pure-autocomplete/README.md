@@ -43,17 +43,18 @@ API
 ===
 Constructor AutoComplete
 ```javascript
-new AutoComplete = {
+var auto = new AutoComplete({
     inputElementId: '', // input text Element ID
     listElementId: '', // list view Element ID, usually <ul>
     formList: [], // [Array] You can initial list here, default is null Array
     selectListCB: callback, // callback function when select a list item,
     deleteCB: callback, // callback function when delete a item
-}
+});
 ```
 AutoComplete.setList
 
 >  Setup formList manually
+
 ```javascript
 auto.setList([ /* Array List here */]);
 ```
@@ -61,6 +62,7 @@ auto.setList([ /* Array List here */]);
 Constructor.getList
 
 > Show the list for user to select
+
 ```javascript
 auto.geList(value); // value is a input value
 ```
