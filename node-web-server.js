@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node
 
 var util = require('util'),
