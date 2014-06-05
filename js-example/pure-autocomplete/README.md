@@ -85,3 +85,5 @@ Screenshot
 ![screen shot 2014-06-05 at 1 06 31 am](https://cloud.githubusercontent.com/assets/2560096/3176975/ac6c2a72-ec0a-11e3-86cd-f3cfa4b0154f.png)
 
 ![screen shot 2014-06-05 at 1 06 35 am](https://cloud.githubusercontent.com/assets/2560096/3176978/b02340ba-ec0a-11e3-8844-4f62b27da4de.png)
+
+![video](https://cloud.githubusercontent.com/assets/2560096/3182747/a7671cb4-ec58-11e3-9694-276be9635316.gif)
