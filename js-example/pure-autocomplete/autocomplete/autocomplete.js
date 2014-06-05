@@ -41,7 +41,7 @@
 
         for (var i = 0; i < self.formLi.length; i++) {
             var text = self.formLi[i].innerText || self.formLi[i].textContent;
-            console.log(text)
+
             var testReg = new RegExp('^' + value);
             if (testReg.test(text)) {
                 showEl.push(self.formLi[i]);
@@ -51,11 +51,9 @@
                 self.formLi[i].style.display = 'none';
             }
         }
-console.log('show')
-        console.log(showEl)
         if (showEl.length == 0) return;
+
         this.showList();
-console.log('show2')
         // first element li
         showEl[0].style.color = 'white';
         showEl[0].style.backgroundColor = 'black';
