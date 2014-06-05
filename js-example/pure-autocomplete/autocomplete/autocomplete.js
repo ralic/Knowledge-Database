@@ -22,7 +22,7 @@
         var self = this;
 
         for (var i = 0; i < data.length; i++) {
-            self.formLi[i] = self.formEl.insertBefore(createLi(data[i]));
+            self.formLi[i] = self.formEl.appendChild(createLi(data[i]));
         }
 
         this.actionLi();
@@ -40,7 +40,8 @@
         }
 
         for (var i = 0; i < self.formLi.length; i++) {
-            var text = self.formLi[i].innerText;
+            var text = self.formLi[i].innerText || self.formLi[i].textContent;
+            console.log(text)
             var testReg = new RegExp('^' + value);
             if (testReg.test(text)) {
                 showEl.push(self.formLi[i]);
@@ -50,17 +51,18 @@
                 self.formLi[i].style.display = 'none';
             }
         }
-
+console.log('show')
+        console.log(showEl)
         if (showEl.length == 0) return;
         this.showList();
-
+console.log('show2')
         // first element li
         showEl[0].style.color = 'white';
         showEl[0].style.backgroundColor = 'black';
 
 
         keydownEvent(13, function () { // enter
-            if (showEl[0].innerText == self.inputEl.value) {
+            if (showEl[0].innerText == self.inputEl.value || showEl[0].textContent == self.inputEl.value) {
                 showEl[0].onclick();
 
                 RemoveKeyDownEvent();
@@ -74,7 +76,7 @@
         var self = this;
         for (var i = 0; i < self.formLi.length; i++) {
             self.formLi[i].onclick = function () {
-                var text = this.innerText;
+                var text = this.innerText || this.textContent;
                 var Xsymbol = self.inputEl.parentNode.insertBefore(createSpan(text), self.inputEl);
 
                 self.inputEl.value = '';
