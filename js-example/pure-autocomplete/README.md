@@ -8,7 +8,7 @@ Focus on `tagsinput` and `autocomplete`, but *small amount* and *known data*
 Requirement
 ===
 
-Modern Browser is required
+Currenly only Working on Chrome (FF, IE is coming)
 
 Open up a `http://localhost` or just `file://` server
 
