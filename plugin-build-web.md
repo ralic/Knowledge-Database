@@ -49,6 +49,9 @@ Collection of Building Web
 ###Syntax Highlighter###
 1. [Prism](syntax highlighter)
 
+###Count Down###
+1. [FlipClock](https://github.com/objectivehtml/FlipClock)
+
 ###Loading###
 1. [pace](https://github.com/HubSpot/pace)
 2. [ngProgress](http://victorbjelkholm.github.io/ngProgress/) - angular solution
