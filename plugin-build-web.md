@@ -48,6 +48,7 @@ Collection of Building Web
 
 ###Syntax Highlighter###
 1. [Prism](syntax highlighter)
+2. [Rainbow](https://github.com/ccampbell/rainbow)
 
 ###Count Down###
 1. [FlipClock](https://github.com/objectivehtml/FlipClock)
