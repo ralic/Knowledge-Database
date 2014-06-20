@@ -69,5 +69,6 @@ CI and badge
 Full Stack Framework
 
 1. [expressjs](expressjs.com) - basic
+2. [hapi](https://github.com/spumko/hapi) - basic server framework
 2. [mean](mean.io)
 3. [loopback](https://github.com/strongloop/loopback) - 強 ...
