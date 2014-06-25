@@ -14,6 +14,7 @@ var Prototype = (function () {
     return {
         Browser: {
             IE:             !!window.attachEvent && !isOpera,
+            // ((userAgent.indexOf('msie') !== -1) || (userAgent.indexOf('Trident') !== -1))
             Opera:          isOpera,
             WebKit:         ua.indexOf('AppleWebKit/') > -1,
             Gecko:          ua.indexOf('Gecko') > -1 && ua.indexOf('KHTML') === -1,
