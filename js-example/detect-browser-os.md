@@ -1,6 +1,6 @@
 This is the collection of `Prototype.js` `fastclick.js` `isMobile.js` to detect Browser, OS
 
-```javascript
+```js
 
 // https://github.com/sstephenson/prototype/blob/master/src/prototype/prototype.js#L76
 // https://github.com/ftlabs/fastclick/blob/master/lib/fastclick.js#L174
@@ -28,4 +28,15 @@ var Prototype = (function () {
     }
 
 })();
+```
+
+---
+
+Using Callback when browser is **IE**
+
+```js
+var isIE = Prototype.Browser.IE;
+var isIECallback = function (yes,no) {
+    return (isIE) ? (yes ? yes() : null) : (no ? no() : null);
+};
 ```
