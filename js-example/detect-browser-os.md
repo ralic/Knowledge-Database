@@ -44,7 +44,7 @@ var isIECallback = function (yes,no) {
 
 Do something one time when browser is **IE**
 ```js
-this.isIEDoSomethingOneTime = function () {
+var isIEDoSomethingOneTime = function () {
     if (isIE && ($.cookie('isIEDoSomething') !== 'Done')) {
         // do something
         $.cookie('isIEDoSomething', 'Done', { expires: 3, path: '/' });
