@@ -33,10 +33,22 @@ var Prototype = (function () {
 ---
 
 Using Callback when browser is **IE**
-
 ```js
 var isIE = Prototype.Browser.IE;
 var isIECallback = function (yes,no) {
     return (isIE) ? (yes ? yes() : null) : (no ? no() : null);
+};
+```
+
+---
+
+Do something one time when browser is **IE**
+```js
+this.isIEDoSomethingOneTime = function () {
+    if (isIE && ($.cookie('isIEDoSomething') !== 'Done')) {
+        // do something
+        $.cookie('isIEDoSomething', 'Done', { expires: 3, path: '/' });
+        return;
+    }
 };
 ```
