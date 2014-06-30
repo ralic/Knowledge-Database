@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotate - css hover to rotate</title>
+    <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="./rotate.css"/>
+    <style>
+        body {
+            width: 890px;
+            margin: 0 auto;
+            font-family: 'The Girl Next Door', cursive;
+        }
+
+        .container {
+            position: relative;
+            top: 50px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 100%;
+            border: 5px solid #ddd;
+            opacity: 0.5;
+        }
+
+        .title {
+            color: #002aea;
+        }
+
+        .demo {
+            position: relative;
+            display: inline-block;
+            height: auto;
+        }
+
+        .demo > p {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translate(0%, -100%);
+            -ms-transform: translate(0%, -100%);
+            -webkit-transform: translate(0%, -100%);
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1> Hover to <span class="rotate title">rotate</span>, Fork me on <a href="https://github.com/huei90/rotate"
+                                                                          class="rotate faster title">github </a></h1>
+
+    <h1><span class="rotate">Rotate</span> everything by using only <span
+            class="rotate slower reverse title when start">CSS3</span></h1>
+
+    <div class="demo">
+        <img class="rotate" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate me</p>
+    </div>
+    <div class="demo">
+        <img class="rotate one time" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate one time</p>
+    </div>
+    <div class="demo">
+        <img class="rotate reverse" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate reverse</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate faster" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate faster</p>
+    </div>
+
+
+    <div class="demo">
+        <img class="rotate slower" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate slower</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate faster reverse" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate faster reverse</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate easeIn faster" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate easeIn faster</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate easeOut" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate easeOut</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate and stop" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate and stop</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate when start" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate when start</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate reverse slower when start" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate reverse slower when start</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate enlarge" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate enlarge</p>
+    </div>
+
+    <div class="demo">
+        <img class="rotate reduce" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate reduce</p>
+    </div>
+    <div class="demo">
+        <img class="rotate reduce slower reverse easeOut and stop" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate reduce slower reverse easeOut and stop</p>
+    </div>
+    <div class="demo">
+        <img class="rotate infinite" src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>rotate infinite</p>
+    </div>
+    <div class="demo">
+        <img src="https://avatars2.githubusercontent.com/u/2560096?s=460"/>
+
+        <p>etc ...</p>
+    </div>
+    <br/>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+//------------------------
+// vendorize - prefix
+//------------------------
+@mixin vendorize($prop, $value) {
+  #{$prop}: $value;
+  -moz-#{$prop}: $value;
+  -webkit-#{$prop}: $value;
+  -o-#{$prop}: $value;
+  -ms-#{$prop}: $value;
+
+}
+
+//------------------------
+// mixin
+//------------------------
+@mixin transform($transform) {
+  @include vendorize(transform, $transform);
+}
+
+@mixin transition-duration($duration) {
+  @include vendorize(transition-duration, $duration);
+}
+
+@mixin transition-timing-function($function) {
+  @include vendorize(transition-timing-function, $function);
+}
+
+@mixin animation-name($name...) {
+  @include vendorize(animation-name, $name);
+}
+
+@mixin animation-duration($duration...) {
+  @include vendorize(animation-duration, $duration);
+}
+
+@mixin animation-timing-function($timing...) {
+  @include vendorize(animation-timing-function, $timing);
+}
+
+@mixin animation-iteration-count($count...) {
+  @include vendorize(animation-iteration-count, $count);
+}
+
+@mixin animation-direction($direction...) {
+  @include vendorize(animation-direction, $direction);
+}
+
+@mixin keyframes($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin init {
+  display: inline-block;
+}

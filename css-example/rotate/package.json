@@ -1,0 +1,17 @@
+{
+    "name": "rotate",
+    "version": "0.1.1",
+    "description": "Rotate everything by using only CSS3",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/huei90/rotate"
+    },
+    "homepage": "http://huei90.github.io/rotate",
+    "author": {
+        "name": "Huei Tan",
+        "email": "huei90@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": ["CSS3", "animation", "rotate", "css animation"],
+    "bugs": "https://github.com/huei90/rotate/issues"
+}

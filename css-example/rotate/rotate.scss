@@ -1,0 +1,82 @@
+// variable
+@import "partials/variable";
+// mixin
+@import "partials/mixin";
+// method
+@import "partials/method";
+
+//------------------------
+// rotate css
+//------------------------
+.rotate {
+  @include init();
+
+  &:hover {
+    @include animation-name(rotate);
+    @include animation-duration(5s);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+  }
+
+  &.start {
+    @include animation-name(rotate);
+    @include animation-duration(5s);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+  }
+
+  &.one {
+    &.time {
+      @include animation-iteration-count(1);
+    }
+  }
+
+  &.infinite {
+    @include animation-iteration-count(infinite);
+  }
+
+  &.reverse {
+
+    &:hover {
+      @include animation-direction(reverse);
+    }
+
+  }
+
+  &.faster {
+    &:hover {
+      @include animation-duration(1s);
+    }
+  }
+
+  &.slower {
+    &:hover {
+      @include animation-duration(9s);
+    }
+  }
+
+  &.easeIn {
+    @include animation-timing-function(ease-in);
+  }
+
+  &.easeOut {
+    @include animation-timing-function(ease-out);
+  }
+
+  &.stop {
+    @include animation-iteration-count(1);
+  }
+
+  &.enlarge {
+    &:hover {
+      @include animation-name(enlarge);
+    }
+  }
+
+  &.reduce {
+    &:hover {
+      @include animation-name(reduce);
+    }
+  }
+}
+
