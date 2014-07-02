@@ -1,0 +1,19 @@
+{
+  "name": "MaskingTapeCanvas",
+  "version": "0.1.0",
+  "description": "Masking Tape using Canvas",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Huei Tan",
+  "dependencies": {},
+  "devDependencies": {
+      "grunt": "~0.4.1",
+      "grunt-contrib-clean": "~0.5.0",
+      "grunt-contrib-concat": "~0.1.2",
+      "grunt-contrib-uglify": "~0.2.6",
+      "grunt-contrib-connect": "~0.6.0",
+      "grunt-contrib-watch": "~0.5.3"
+  }
+}

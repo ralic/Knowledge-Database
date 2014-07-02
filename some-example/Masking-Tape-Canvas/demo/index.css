@@ -1,0 +1,125 @@
+
+body {
+    font-family: 'Alegreya', serif;
+}
+
+.container {
+    width: 800px;
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+/********************************
+ * section 1 - Masking Tape Canvas
+ ********************************/
+
+.section1 {
+    background-color: #FFDC00;
+    -webkit-box-shadow: inset 0px -8px 17px 0px rgb(198, 137, 7);
+    -moz-box-shadow: inset 0px -8px 17px 0px rgb(198, 137, 7);
+    box-shadow: inset 0px -8px 17px 0px rgb(198, 137, 7);
+}
+
+.section1 .maskingTape {
+    position: absolute;
+    top: 150px;
+}
+
+.section1 .title {
+    position: absolute;
+    font-size: 65px;
+    color: rgb(151, 106, 33);
+    text-shadow: 2px 2px #c68907;
+    right: 90px;
+    top: 150px;
+}
+
+.section1 .desc {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(207, 172, 110);
+    right: 90px;
+    top: 280px;
+}
+
+/********************************
+ * section 2 - What
+ ********************************/
+
+.section2 {
+    background-color: #2ECC40;
+    -webkit-box-shadow: inset 0px -8px 17px 0px rgba(45, 158, 0, 1);
+    -moz-box-shadow: inset 0px -8px 17px 0px rgba(45, 158, 0, 1);
+    box-shadow: inset 0px -8px 17px 0px rgba(45, 158, 0, 1);
+}
+
+.section2 .maskingTape {
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+.section2 .title {
+    position: absolute;
+    font-size: 65px;
+    color: rgb(33, 105, 100);
+    text-shadow: 2px 2px rgb(93, 172, 169);
+    left: 90px;
+    top: 140px;
+}
+
+.section2 .desc {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(93, 172, 169);
+    left: 90px;
+    top: 270px;
+}
+
+/********************************
+ * section 3 - How
+ ********************************/
+
+.section3 {
+    background-color: #0074D9;
+    -webkit-box-shadow: inset 0px -8px 17px 0px rgb(8, 73, 234);
+    -moz-box-shadow: inset 0px -8px 17px 0px rgb(8, 73, 234);
+    box-shadow: inset 0px -8px 17px 0px rgb(8, 73, 234);
+}
+
+.section3 .maskingTape {
+    position: absolute;
+    top: 150px;
+}
+
+.section3 .title {
+    position: absolute;
+    font-size: 65px;
+    color: rgb(141, 188, 181);
+    text-shadow: 2px 2px rgb(169, 169, 169);
+    right: 90px;
+    top: 150px;
+}
+
+.section3 .desc {
+    text-align: right;
+    position: absolute;
+    font-size: 30px;
+    color: rgb(169, 169, 169);
+    right: 90px;
+    top: 280px;
+}
+
+/********************************
+ * section 4 - mtshow
+ ********************************/
+
+.mtshow {
+    text-align: center;
+    background-color: #eeeeee;
+    -webkit-box-shadow: inset 0px -8px 17px 0px #999;
+    -moz-box-shadow: inset 0px -8px 17px 0px #999;
+    box-shadow: inset 0px -8px 17px 0px #999;
+}

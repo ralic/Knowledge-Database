@@ -3,7 +3,7 @@ rotate
 
 Rotate everything by using only CSS3
 
-[DEMO](http://huei90.github.io/F2E-Knowledge-Database-by-Huei/css-example/rotate/index.html)
+[DEMO](http://huei90.github.io/F2E-Knowledge-Database-by-Huei/some-example/rotate/index.html)
 
 Inspired by [scrollReveal](https://github.com/julianlloyd/scrollReveal.js) and [csshake](https://github.com/elrumordelaluz/csshake)
 
