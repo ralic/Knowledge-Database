@@ -1,0 +1,27 @@
+{
+    "name": "neo4jquery",
+    "title": "neo4jquery",
+    "description": "neo4jquery.js available developer uses jquery ajax method through REST with CYPHER in the easiet way to implement neo4j graph database",
+    "keywords": [
+        "database"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Huei Tan",
+        "url": "https://github.com/huei90"
+    },
+    "licenses": [
+        {
+            "type": "GNU 3.0",
+            "url": "https://raw.github.com/huei90/neo4jquery/master/license.txt"
+        }
+    ],
+    "bugs": "https://github.com/huei90/neo4jquery/issues",
+    "homepage": "https://github.com/huei90/neo4jquery",
+    "docs": "https://github.com/huei90/neo4jquery",
+    "download": "https: //github.com/huei90/neo4jquery",
+    "dependencies": {
+        "jquery": ">=1.8",
+        "neo4j": ">=1.8"
+    }
+}

@@ -1,0 +1,7 @@
+
+function list
+=============
+neo4jquery() - constructor
+cypher() - send a querying with Cypher
+createNode() - Create single node with propeties,index
+
