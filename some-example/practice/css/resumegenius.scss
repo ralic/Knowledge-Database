@@ -1,0 +1,196 @@
+body {
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  padding: 30px 20px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 30px;
+  }
+
+}
+
+button.green_button {
+  width: 266px;
+  height: 50px;
+  border: 0px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #5CAC08;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #69c408;
+  }
+}
+
+#header {
+  height: 100px;
+  background-color: #000;
+  border-bottom: 1px solid #7E7B7B;
+  .logo {
+    color: #fff;
+    background: url('./images/logo.png') no-repeat;
+    display: inline;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    display: inline;
+    margin-top: 15px;
+    @media (max-width: 770px) {
+      display: none;
+    }
+    li {
+      margin: 30px 10px;
+      display: inline;
+    }
+  }
+}
+
+#gallery {
+  background-color: #4f4f4f;
+  color: #fff;
+  height: 500px;
+  overflow: hidden;
+  @media (max-width: 500px) {
+    height: 650px;
+  }
+  .title1 {
+    font-size: 24px;
+    margin: 0;
+    position: relative;
+  }
+  .title2 {
+    font-size: 53px;
+    margin: 0;
+    position: relative;
+  }
+  .title3 {
+    font-size: 53px;
+    left: 33px;
+    position: relative;
+    @media (max-width: 500px) {
+      left: 0px;
+    }
+  }
+  ul {
+    list-style-image: url('../images/tick.png');
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
+  button {
+    position: relative;
+    left: 33px;
+    margin: 10px 0;
+    @media (max-width: 500px) {
+      left: 0px;
+    }
+  }
+  .reminder {
+    position: relative;
+    font-size: 12px;
+    left: 60px;
+    @media (max-width: 500px) {
+      left: 0px;
+    }
+  }
+
+}
+
+#feature {
+  background-color: #FFFEF2;
+  img {
+    width: 100%;
+  }
+}
+
+#choose {
+  background-color: #FFF;
+
+  img {
+    height: 130px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+#client {
+  background-color: #D7DDE6;
+  .client {
+    img {
+      display: inline-block;
+      width: 100px;
+      border-radius: 100px;
+      border: 3px solid #fff;
+
+      &.left {
+        position: relative;
+        left: 30px;
+        z-index: 100;
+        margin-left: -20px;
+
+      }
+      &.middle {
+        position: relative;
+        width: 150px;
+        z-index: 300;
+      }
+      &.right {
+        position: relative;
+        left: -30px;
+        z-index: 100;
+      }
+
+      @media (max-width: 417px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+#membership {
+  p {
+    &.title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 990px) {
+    p {
+      text-align: center;
+    }
+    img {
+      margin: 10px 0;
+    }
+  }
+}
+
+#footer {
+  background-color: #5A616D;
+}
