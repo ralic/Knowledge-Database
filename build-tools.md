@@ -46,7 +46,8 @@ social network / code resource for IT
 9. [Gurudigger](http://gurudigger.com/)
 10. [reddit](http://www.reddit.com/user/huei90/)
 11. [coderwall](https://coderwall.com/)
-12. more ...
+12. [gitlab](https://gitlab.com/)
+13. more ...
 
 get badge for your repo
 
