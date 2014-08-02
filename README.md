@@ -26,5 +26,6 @@ Summary
  6. [interval.js](https://github.com/huei90/F2E-Knowledge-Database-by-Huei/tree/master/some-example/interval.js)
  7. [Learning restify mongodb](https://github.com/huei90/F2E-Knowledge-Database-by-Huei/tree/master/node-restify-mongodb)
  8. [Leaning expressjs with google maps](https://github.com/huei90/F2E-Knowledge-Database-by-Huei/tree/master/google-maps-v3)
+ 9. [Learning SVG with raphael](https://github.com/huei90/F2E-Knowledge-Database-by-Huei/tree/master/svg-example)
 
 This is just a beginning ...
