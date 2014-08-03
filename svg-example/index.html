@@ -9,7 +9,7 @@
 </head>
 <body>
 
-
+<div id="zoom" style="position: fixed; bottom:0; right:0;"></div>
 <!-- main -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
 <!-- plugin -->
@@ -25,7 +25,11 @@
         var R = Raphael(0,0, '100%', '100%');
 
         // inital zoom/pad/drag
-        var zpd = new RaphaelZPD(R, { zoom: true, pan: true, drag: false });
+        var zpdOpts = {
+            on: { zoom: true, pan: true, drag: false , zoomThreshold: [-100, 100]},
+            off: { zoom: true, pan: false, drag: false}
+        }
+        var zpd = new RaphaelZPD(R, zpdOpts.on);
 
         var t = R.add(tiger).translate(400,200);
         var c = R.circle(200, 450,50).attr({fill: 'red'});
@@ -36,17 +40,17 @@
             keepRatio: [ 'axisX', 'axisY', 'bboxCorners', 'bboxSides' ]
         }, function (ft, event) {
             if (event[0].indexOf('start') !== -1 || event[0].indexOf('apply') !== -1 || event[0].indexOf('rotate') !== -1) {
-                zpd.opts = { zoom: true, pan: false, drag: false};
+                zpd.opts = zpdOpts.off;
             } else if (event[0].indexOf('end') !== -1) {
                 zpd.state = '';
-                zpd.opts = { zoom: true, pan: true, drag: false};
+                zpd.opts = zpdOpts.off;
             }
 
         });
 
         // ah jar! Conflict tussen zpd und freeTransform ...
         // ah! zpd edge probleem
-
+        // ah 2! zpd move wheel probleem
     };
 </script>
 </body>

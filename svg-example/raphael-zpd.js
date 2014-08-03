@@ -200,6 +200,9 @@ RaphaelZPD = function(raphaelPaper, o) {
         else
             delta = evt.detail / -90; // Mozilla
 
+        // add by huei
+        document.getElementById('zoom').textContent = me.zoomCurrent;
+
         if (delta > 0) {
             if (me.opts.zoomThreshold)
                 if (me.opts.zoomThreshold[1] <= me.zoomCurrent) return;
