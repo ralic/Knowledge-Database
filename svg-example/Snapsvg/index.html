@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A zoom/pan/drag plugin for Snap.svg</title>
+    <style>
+        html, body { margin:0; padding:0; overflow:hidden }
+        svg { position:fixed; top:0; left:0; height:100%; width:100% }
+    </style>
+
+    <script src="./lib/snap.svg.js"></script>
+</head>
+<body>
+
+<script>
+
+    (function (Snap) {
+        Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
+            Element.prototype.toCenter = function () {
+                var me = this;
+                var origX;
+                var origY;
+                var clone; // bring to center use (helper)
+                var isClone = false;
+
+                me.mouseup(function (evt) {
+
+                    if (isClone) {
+                        return;
+                    }
+
+                    var screenWidth = document.body.clientWidth;
+                    var screenHeight = screen.availHeight;
+                    var targetHeight = me.attr('height') || me.node.clientHeight;
+                    var targetWidth = me.attr('width') || me.node.clientWidth;
+
+                    var top = screenHeight / 2 - targetHeight / 2;
+                    var left = screenWidth / 2 - targetWidth / 2;
+
+                    origX = me.attr('x') !== undefined ? me.attr('x') : 0;
+                    origY = me.attr('y') !== undefined ? me.attr('y') : 0;
+
+                    clone = me.clone();
+
+                    me.node.style.opacity = '0';
+
+                    clone.animate({x: left, y: top}, 100, mina.easeout, function () {
+                        clone.appendTo(me.paper);
+                        isClone = true;
+                    });
+
+                    clone.mouseup(function () {
+                        clone.animate({x: origX, y: origY}, 100, mina.easein, function () {
+                            this.remove(); // remove clone object
+                            me.node.style.opacity = '1';
+                            isClone = false;
+                        });
+                    });
+                });
+            }
+        });
+    })(Snap);
+
+    (function () {
+        var paper = Snap();
+
+        var image1 = paper.image('./lib/image1.png');
+        var image2 = paper.image('./lib/image2.png', 100, 220, 500, 205);
+        var image3 = paper.image('./lib/image3.png', 500, 100, 400, 332.5);
+        var text = paper.text(50, 100, 'drag me').addClass('dragText');
+        // var circle = paper.circle(100, 100, 200).attr({fill: 'green'});
+
+        text.toCenter();
+        image1.toCenter();
+        image2.toCenter();
+        image3.toCenter();
+
+        // to-do
+        // <circle> <ellipse> with cx cy attributes
+        // if transform="matrix(a,b,c,d,e,f)" exists, do the transformation
+    })();
+
+</script>
+</body>
+
+</html>

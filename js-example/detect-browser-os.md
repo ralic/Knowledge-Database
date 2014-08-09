@@ -30,6 +30,31 @@ var Prototype = (function () {
 })();
 ```
 
+`redactor.js` detect browser and oldIE
+
+```js
+var browser = function(browser) {
+	var ua = navigator.userAgent.toLowerCase();
+	var match = /(chrome)[ \/]([\w.]+)/.exec(ua)
+			|| /(webkit)[ \/]([\w.]+)/.exec(ua)
+			|| /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua)
+			|| /(msie) ([\w.]+)/.exec(ua)
+			|| ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua)
+			|| [];
+
+	if (browser == 'version') return match[2];
+	if (browser == 'webkit') return (match[1] == 'chrome' || match[1] == 'webkit');
+
+	return match[1] == browser;
+}
+
+var oldIE = function()
+{
+	if (this.browser('msie') && parseInt(this.browser('version'), 10) < 9) return true;
+	
+	return false;		
+}
+```
 ---
 
 Using Callback when browser is **IE**
