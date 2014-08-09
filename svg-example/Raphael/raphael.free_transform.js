@@ -6,7 +6,7 @@
 (function (root, factory) {
     if ( typeof define === 'function' && define.amd ) {
         // AMD. Register as an anonymous module.
-        define(['raphael'], function(Raphael) {
+        define([''], function(Raphael) {
             // Use global variables if the locals are undefined.
             return factory(Raphael || root.Raphael);
         });
