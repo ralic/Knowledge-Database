@@ -113,3 +113,8 @@ SYMBOLIC_CONSTANTS_LIKE_THIS;
 4. [CasperJS](http://casperjs.org/) - CasperJS is a navigation scripting & testing utility for PhantomJS and SlimerJS written in Javascript
 5. [jake](https://github.com/jakejs/jake)
 6. more collection to share ...
+
+###快速開發###
+1. bootstrap
+2. zurb foundation
+3. [Amaze UI](http://amazeui.org/) - 中國版的 bootstrap - Amaze UI 专注解决中文排版优化问题，根据操作系统调整字体，实现最佳中文排版效果；针对国内主流浏览器及 App 内置
