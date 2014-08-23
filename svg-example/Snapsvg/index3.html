@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Drag</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>body {
+        background: #fff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #sortable .block{
+        display: inline-block;
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+    #sortable .block2{
+        position: relative;
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+    #sortable2 .block, #sortable2 .block2{
+        display: inline-block;
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+    #sortable, #sortable2 {
+        list-style: none;
+    }
+
+    #sortable li {
+        float: left;
+        position: relative;
+        z-index: 5;
+    }
+
+    #sortable2 li {
+        position: absolute;
+        z-index: 1;
+    }
+
+        #control {
+            position: fixed;
+            bottom: 50px;
+            right: 100px;
+        }
+
+        #control button {
+            width: 100px;
+            height:50px;
+        }
+    </style>
+    <style>
+
+    </style>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery.ui.all.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/css/lightness/jquery-ui-1.10.2.custom.min.css"
+          rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+
+    <p>Sortable Animation Experiment (test on modern web and iOS safari)</p>
+
+    <ul id="sortable">
+        <li><div class="block"><span>Apple</span></div></li>
+        <li><div class="block"><span>Orange</span></div></li>
+        <li><div class="block"><span>Pineapple</span></div></li>
+        <li><div class="block"><span>Grapes</span></div></li>
+        <li><div class="block"><span>Watermelon</span></div></li>
+        <li><div class="block"><span>Guava</span></div></li>
+    </ul>
+
+
+    <ul id="sortable2">
+    </ul>
+
+    <div id="control">
+
+        <p id="controlMsg"></p>
+        <button id="addBlock">Add</button>
+        <button id="removeBlock">Remove</button>
+    </div>
+    <script>
+
+
+jQuery(function(){
+
+    var input = 3,
+            selected = null,
+            someoneDrag = false;
+
+    // loop through the original items...
+    var update = function () {
+        jQuery('#sortable2').html('');
+        jQuery("#sortable li").each(function () {
+
+            // clone the original items to make their
+            // absolute-positioned counterparts...
+            var item = jQuery(this);
+            var item_clone = item.clone();
+            // 'store' the clone for later use...
+
+            item.data("clone", item_clone);
+
+
+            // set the initial position of the clone
+            var position = item.position();
+            item_clone.css("left", position.left);
+            item_clone.css("top", position.top);
+            item_clone.css('position', '');
+            item_clone.css('zIndex', '');
+            // append the clone...
+            jQuery("#sortable2").append(item_clone);
+
+            var isClick = false;
+            jQuery(this).click(function () {
+                if (someoneDrag) return;
+                if (!isClick) {
+                    $(this).css('backgroundColor', 'blue');
+                    selected = this;
+                    $('#controlMsg').html('You have select <strong>' + $(this).html() +'</strong>');
+                } else {
+                    $(this).css('backgroundColor', 'white');
+                    selected = null;
+                    $('#controlMsg').html('');
+                }
+                isClick = !isClick;
+
+            });
+        });
+    };
+
+    update();
+    jQuery('#addBlock').click(function () {
+        var input = window.prompt('name it!');
+        var appendElement = $('<li><div class="block"><span>'+ (input) +'</span></div></li>');
+        jQuery('#sortable').append(appendElement);
+
+
+        // clone the original items to make their
+        // absolute-positioned counterparts...
+        var item = jQuery(appendElement);
+        var item_clone = item.clone();
+        // 'store' the clone for later use...
+        item.data("clone", item_clone);
+
+        // set the initial position of the clone
+        var position = item.position();
+        item_clone.css("left", position.left);
+        item_clone.css("top", position.top);
+        item_clone.css('position', '');
+        item_clone.css('zIndex', '');
+        // append the clone...
+        jQuery("#sortable2").append(item_clone);
+
+        var isClick = false;
+        jQuery(item).click(function () {
+            if (someoneDrag) return;
+            if (!isClick) {
+                $(this).css('backgroundColor', 'blue');
+                selected = this;
+                $('#controlMsg').html('You have select <strong>' + $(this).html() +'</strong>');
+            } else {
+                $(this).css('backgroundColor', 'white');
+                selected = null;
+                $('#controlMsg').html('');
+            }
+            isClick = !isClick;
+
+        });
+
+    });
+
+    jQuery('#removeBlock').click(function () {
+        if (selected) {
+            jQuery(selected).remove();
+            $('#controlMsg').html('');
+            update();
+        } else {
+            $('#controlMsg').html('please select one');
+        }
+        selected = null;
+
+    });
+
+    // create our sortable as usual...
+    // with some event handler extras...
+    $( "#sortable" ).sortable({
+        revert: 300,
+        // on sorting start, hide the original items...
+        // only adjust the visibility, we still need
+        // their float positions..!
+        start: function(e, ui){
+            // loop through the items, except the one we're
+            // currently dragging, and hide it...
+            someoneDrag = true;
+            ui.helper.addClass("exclude-me");
+            jQuery("#sortable li:not(.exclude-me)")
+                    .css("visibility", "hidden");
+
+            // get the clone that's under it and hide it...
+            ui.helper.data("clone").hide();
+        },
+
+        stop: function(e, ui){
+            // get the item we were just dragging, and
+            // its clone, and adjust accordingly...
+            jQuery("#sortable li.exclude-me").each(function(){
+                var item = jQuery(this);
+                var clone = item.data("clone");
+                var position = item.position();
+
+                // move the clone under the item we've just dropped...
+                clone.css("left", position.left);
+                clone.css("top", position.top);
+                clone.show();
+
+                // remove unnecessary class...
+                item.removeClass("exclude-me");
+            });
+
+
+            // make sure all our original items are visible again...
+            setTimeout(function () {
+                jQuery("#sortable li").css("visibility", "visible");
+                someoneDrag = false;
+            },400);
+
+        },
+
+        // here's where the magic happens...
+        change: function(e, ui){
+            // get all invisible items that are also not placeholders
+            // and process them when ordering changes...
+            jQuery("#sortable li:not(.exclude-me, .ui-sortable-placeholder)").each(function(){
+                var item = jQuery(this);
+                var clone = item.data("clone");
+
+                // stop current clone animations...
+                clone.stop(true, false);
+
+                // get the invisible item, which has snapped to a new
+                // location, get its position, and animate the visible
+                // clone to it...
+                var position = item.position();
+                clone.animate({
+                    left: position.left,
+                    top:position.top}, 500);
+            });
+        }
+
+
+    });
+
+});
+    </script>
+
+</div>
+</body>
+</html>

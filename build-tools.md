@@ -47,6 +47,7 @@ social network / code resource for IT
 10. [reddit](http://www.reddit.com/user/huei90/)
 11. [coderwall](https://coderwall.com/)
 12. [gitlab](https://gitlab.com/)
+13. [w3ctech](http://www.w3ctech.com/) - 中国最大的前端技术社区 ? he said
 13. more ...
 
 get badge for your repo
@@ -75,3 +76,10 @@ Full Stack Framework
 2. [hapi](https://github.com/spumko/hapi) - basic server framework
 2. [mean](mean.io)
 3. [loopback](https://github.com/strongloop/loopback) - 強 ...
+
+Version Control
+
+1. Mercurial
+2. Git
+3. Subversion
+4. Bazaar
