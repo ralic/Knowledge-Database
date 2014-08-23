@@ -13,7 +13,7 @@ hard code =(
 
 <ul id="sortable2">
 </ul>
-```html
+```
 
 ```css
 #sortable li {
