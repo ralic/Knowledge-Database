@@ -57,12 +57,13 @@
     #control {
         position: fixed;
         bottom: 50px;
-        right: 100px;
+        right: 150px;
     }
 
     #control button {
         width: 100px;
         height: 50px;
+        margin: 0 10px;
     }
     </style>
     <style>
@@ -109,11 +110,11 @@
 
     <div id="control">
         <p id="controlMsg"></p>
-        <button id="addBlock">Add</button>
-        <button id="removeBlock">Remove</button>
+        <button id="addBlock">＋</button>
+        <button id="removeBlock">－</button>
     </div>
-    <script>
 
+    <script>
 
         $(function () {
 
@@ -122,9 +123,14 @@
 
             $('#addBlock').click(function () {
                 var input = window.prompt('name it!');
+                if (!input) {
+                    alert('you have to name it! Try again.')
+                    return;
+                }
                 var appendElement = $('<li><div class="block"><span>' + (input) + '</span></div></li>');
                 $('#sortable').append(appendElement);
 
+                removeSelect();
                 updateBlock();
 
             });
@@ -210,7 +216,7 @@
                     item_clone.css("left", position.left);
                     item_clone.css("top", position.top);
                     item_clone.css('position', '');
-                    item_clone.css('zIndex', '');
+                    item_clone.css('zIndex', '-999');
 
                     // append the clone...
                     $("#sortable2").append(item_clone);
@@ -225,13 +231,14 @@
 
                             $(this).css('backgroundColor', '#0074D9');
                             selected = this;
-                            $('#controlMsg').html('You have select <strong>' + $(this).html() + '</strong>');
+                            console.log()
+                            $('#controlMsg').html('You have select <strong>' + $($(this).html()).html() + '</strong>');
                             return;
                         }
                         if ($(this).css('backgroundColor') === 'rgb(255, 255, 255)') {
                             selected = this;
                             $(this).css('backgroundColor', '#0074D9');$(this).css('backgroundColor', '#0074D9');$(this).css('backgroundColor', '#0074D9');
-                            $('#controlMsg').html('You have select <strong>' + $(this).html() + '</strong>');
+                            $('#controlMsg').html('You have select <strong>' + $($(this).html()).html() + '</strong>');
                         } else {
                             $(this).css('backgroundColor', 'white');
                             selected = null;
