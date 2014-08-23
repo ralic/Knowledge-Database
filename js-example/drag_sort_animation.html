@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Drag Sort Animation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>body {
+        background: #fff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #sortable .block {
+        display: inline-block;
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+    #sortable .block:hover {
+        cursor: move;
+    }
+
+    #sortable2 .block{
+        display: inline-block;
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+    #sortable, #sortable2 {
+        list-style: none;
+    }
+
+    #sortable li {
+        float: left;
+        position: relative;
+        z-index: 5;
+    }
+
+    #sortable2 li {
+        position: absolute;
+        z-index: 1;
+    }
+
+    #control {
+        position: fixed;
+        bottom: 50px;
+        right: 100px;
+    }
+
+    #control button {
+        width: 100px;
+        height: 50px;
+    }
+    </style>
+    <style>
+
+    </style>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery.ui.all.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/css/lightness/jquery-ui-1.10.2.custom.min.css"
+          rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+
+    <p>Sortable Animation Experiment (test on modern web and iOS safari)</p>
+
+    <ul id="sortable">
+        <li>
+            <div class="block"><span>Apple</span></div>
+        </li>
+        <li>
+            <div class="block"><span>Orange</span></div>
+        </li>
+        <li>
+            <div class="block"><span>Pineapple</span></div>
+        </li>
+        <li>
+            <div class="block"><span>Grapes</span></div>
+        </li>
+        <li>
+            <div class="block"><span>Watermelon</span></div>
+        </li>
+        <li>
+            <div class="block"><span>Guava</span></div>
+        </li>
+    </ul>
+
+
+    <ul id="sortable2">
+    </ul>
+
+    <div id="control">
+        <p id="controlMsg"></p>
+        <button id="addBlock">Add</button>
+        <button id="removeBlock">Remove</button>
+    </div>
+    <script>
+
+
+        $(function () {
+
+            var selected = null,
+                    someoneDrag = false;
+
+            $('#addBlock').click(function () {
+                var input = window.prompt('name it!');
+                var appendElement = $('<li><div class="block"><span>' + (input) + '</span></div></li>');
+                $('#sortable').append(appendElement);
+
+                updateBlock();
+
+            });
+
+            $('#removeBlock').click(function () {
+                if (selected) {
+                    $(selected).remove();
+                    $('#controlMsg').html('');
+                    updateBlock();
+                    removeSelect();
+                } else {
+                    $('#controlMsg').html('please select one');
+                }
+
+
+            });
+
+            $("#sortable").sortable({
+                revert: 300,
+                start: function (e, ui) {
+
+                    someoneDrag = true;
+                    removeSelect();
+                    ui.helper.addClass("exclude-me");
+                    $("#sortable li:not(.exclude-me)")
+                            .css("visibility", "hidden");
+
+                    ui.helper.data("clone").hide();
+                },
+
+                stop: function (e, ui) {
+                    $("#sortable li.exclude-me").each(function () {
+                        var item = $(this);
+                        var clone = item.data("clone");
+                        var position = item.position();
+
+                        clone.css("left", position.left);
+                        clone.css("top", position.top);
+                        clone.show();
+
+                        item.removeClass("exclude-me");
+                    });
+
+                    setTimeout(function () {
+                        $("#sortable li").css("visibility", "visible");
+                        someoneDrag = false;
+                    }, 300);
+
+                },
+
+                change: function (e, ui) {
+                    jQuery("#sortable li:not(.exclude-me, .ui-sortable-placeholder)").each(function () {
+                        var item = jQuery(this);
+                        var clone = item.data("clone");
+
+                        clone.stop(true, false);
+
+                        var position = item.position();
+                        clone.animate({
+                            left: position.left,
+                            top: position.top}, 500);
+                    });
+                }
+
+
+            });
+
+            function updateBlock() {
+                $('#sortable2').html('');
+                $("#sortable li").each(function () {
+
+                    // clone the original items to make their
+                    // absolute-positioned counterparts...
+                    var item = $(this);
+                    var item_clone = item.clone();
+                    // 'store' the clone for later use...
+
+                    item.data("clone", item_clone);
+
+
+                    // set the initial position of the clone
+                    var position = item.position();
+                    item_clone.css("left", position.left);
+                    item_clone.css("top", position.top);
+                    item_clone.css('position', '');
+                    item_clone.css('zIndex', '');
+
+                    // append the clone...
+                    $("#sortable2").append(item_clone);
+
+                    $(this).off('click');
+                    $(this).click(function () {
+                        // rgb(0, 116, 217) = #0074D9
+                        // rgb(255, 255, 255) = white
+                        if (someoneDrag) return;
+                        if (selected && $(this).css('backgroundColor') !== 'rgb(0, 116, 217)') {
+                            removeSelect();
+
+                            $(this).css('backgroundColor', '#0074D9');
+                            selected = this;
+                            $('#controlMsg').html('You have select <strong>' + $(this).html() + '</strong>');
+                            return;
+                        }
+                        if ($(this).css('backgroundColor') === 'rgb(255, 255, 255)') {
+                            selected = this;
+                            $(this).css('backgroundColor', '#0074D9');$(this).css('backgroundColor', '#0074D9');$(this).css('backgroundColor', '#0074D9');
+                            $('#controlMsg').html('You have select <strong>' + $(this).html() + '</strong>');
+                        } else {
+                            $(this).css('backgroundColor', 'white');
+                            selected = null;
+                            $('#controlMsg').html('');
+                        }
+
+
+                    });
+                });
+            }
+
+            function removeSelect() {
+                $("#sortable li").each(function () {
+                   $(this).css('backgroundColor', 'white');
+                });
+
+                $('#controlMsg').html('');
+                selected = null;
+            }
+
+            updateBlock();
+            removeSelect();
+        });
+    </script>
+
+</div>
+</body>
+</html>
