@@ -27,7 +27,8 @@ package manager
 4. [CNPM](http://cnpmjs.org/) - Private npm registry and web for Company
 5. [jam](https://github.com/caolan/jam) - The JavaScript package manager - using a browser-focused and RequireJS compatible repository
 6. [ender](http://enderjs.com/#news) - the no-library library
-7. no more pls, too many is ><
+7. [duo](https://github.com/duojs/duo) - A next-generation package manager for the front-end.
+8. no more pls, too many is ><
 
 web component (polyfill)
 
