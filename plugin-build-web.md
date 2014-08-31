@@ -45,6 +45,7 @@ Collection of Building Web
 6. [angular-growl](https://github.com/Marcorinck/angular-growl)
 7. [toastr](http://codeseven.github.io/toastr/)
 8. [messenger](http://github.hubspot.com/messenger/)
+9. [html5-desktop-notification](https://github.com/ttsvetko/HTML5-Desktop-Notifications)
 
 ###Syntax Highlighter###
 1. [Prism](syntax highlighter)
