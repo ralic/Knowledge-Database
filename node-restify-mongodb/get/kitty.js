@@ -14,10 +14,10 @@ var kitty = function (req, res, next) {
                 age: kit.age
             });
         });
-        res.send(output);
+        res.json(output);
     });
 
     return next();
-}
+};
 
 module.exports = kitty;
