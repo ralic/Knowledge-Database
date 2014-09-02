@@ -2,6 +2,11 @@
 var chalk = require('chalk');
 
 // ===============
+// global configuration
+// ===============
+var HTTP_PORT = '8080';
+
+// ===============
 // db server
 // ===============
 var mongoose = require('mongoose'),
@@ -17,35 +22,6 @@ db.once('open', function callback() {
 });
 
 // ==================
-// auth facebook
-// ==================
-var FB_LOGIN_PATH = 'auth/facebookLogin';
-var FB_CALLBACK_PATH = 'auth/facebookCallback';
-var FB_APPID = 'xxx';
-var FB_APPSECRET = 'xxx';
-var SERVER_PREFIX = 'http://localhost:8080';
-
-var passport = require('passport'),
-    FacebookStrategy = require('passport-facebook').Strategy;
-
-var fb_login_handler = passport.authenticate('facebook');
-var fb_callback_handler = passport.authenticate('facebook');
-var fb_callback_handler_success = function(req, res) {
-    console.log('we b logged in!');
-    console.dir(req.user);
-};
-
-passport.use(new FacebookStrategy({
-        clientID: FB_APPID,
-        clientSecret: FB_APPSECRET,
-        callbackURL: SERVER_PREFIX + FB_CALLBACK_PATH
-    },
-    function(accessToken, refreshToken, profile, done) {
-        console.log('accessToken='+accessToken+' facebookId='+profile.id)
-        return done(null, profile)
-    })
-);
-// ==================
 // restful api server
 // ==================
 var restify = require('restify');
@@ -55,9 +31,47 @@ var server = restify.createServer({
 });
 server.use(restify.fullResponse());
 server.use(restify.bodyParser());
+server.use(restify.queryParser());
 
-server.listen(8080, function () {
+server.listen(HTTP_PORT, function () {
     console.log('server start');
+});
+
+// ==================
+// auth facebook
+// ==================
+var passport = require('passport'),
+    FacebookStrategy = require('passport-facebook').Strategy;
+var FB_LOGIN_PATH = 'auth/facebookLogin';
+var FB_CALLBACK_PATH = 'auth/facebookCallback';
+var FB_APPID = 'xxx';
+var FB_APPSECRET = 'xxx';
+var SERVER_PREFIX = 'http://localhost:' + HTTP_PORT + '/';
+var FB_PERMISSION = {
+    session: true,
+    scope: ['email'] // add more permission here
+};
+
+server.use(passport.initialize());
+server.use(passport.session());
+passport.use(new FacebookStrategy({
+        clientID: FB_APPID,
+        clientSecret: FB_APPSECRET,
+        callbackURL: SERVER_PREFIX + FB_CALLBACK_PATH
+    }, function(accessToken, refreshToken, profile, done) {
+        // console.log(profile);
+        // console.log('accessToken=' + accessToken + ' facebookId=' + profile.id);
+        // configure the facebook data
+        return done(null, profile);
+    })
+);
+
+passport.serializeUser(function(user, done) {
+    done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+    done(null, user);
 });
 
 // ==================
@@ -82,5 +96,6 @@ server.del('delete/:name', require('./del/delete'));
 
 // auth
 // http://localhost:8080/auth/facebookLogin
-server.get(FB_LOGIN_PATH, fb_login_handler);
-server.get(FB_CALLBACK_PATH, fb_callback_handler, fb_callback_handler_success);
+// http://localhost:8080/auth/facebookCallback
+server.get(FB_LOGIN_PATH, passport.authenticate('facebook', FB_PERMISSION));
+server.get(FB_CALLBACK_PATH, passport.authenticate('facebook', FB_PERMISSION),require('./auth/facebookCallback'));

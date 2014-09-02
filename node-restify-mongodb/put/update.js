@@ -1,6 +1,6 @@
 var Kitten = require('../schema');
 
-function update(req, res, next) {
+var update = function (req, res, next) {
 
 
     Kitten.update({ name: req.params.name }, { name: req.params.newName }, { multi: true }, function (err, numberAffected, raw) {

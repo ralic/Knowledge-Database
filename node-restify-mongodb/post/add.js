@@ -1,6 +1,6 @@
 var Kitten = require('../schema');
 
-function create(req, res, next) {
+var create = function (req, res, next) {
 
     Kitten.create({ name: req.params.name, age: req.params.age }, function (err, kittens) {
         if (err) return console.error(err);
