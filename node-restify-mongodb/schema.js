@@ -2,13 +2,21 @@ var mongoose = require('mongoose');
 
 var kittySchema, Kitten;
 
+// ==================
+// Schema
+// ==================
+
 // kitty schema
 kittySchema = mongoose.Schema({
-    name: String,
-    newKitten: Boolean
-})
+    name: { type: String, default: 'cute kitty'},
+    age: { type: Number, min: 0}
+});
 
-// compiling our schema into a Model
+// ==================
+// Model (compile schema)
+// ==================
+
+// kitty model
 Kitten = mongoose.model('Kitten', kittySchema);
 
 module.exports = Kitten;

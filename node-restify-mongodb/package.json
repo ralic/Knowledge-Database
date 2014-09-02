@@ -1,0 +1,17 @@
+{
+  "name": "node-restify-mongodb",
+  "version": "0.0.0",
+  "description": "**Creating mongodb Restful API through**",
+  "main": "schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "mongoose": "^3.8.15",
+    "restify": "^2.8.2"
+  }
+}
