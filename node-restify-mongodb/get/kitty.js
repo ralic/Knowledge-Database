@@ -11,7 +11,7 @@ var kitty = function (req, res, next) {
         kittens.forEach(function (kit) {
             output.push({
                 name: kit.name,
-                newKitten: kit.newKitten
+                age: kit.age
             });
         });
         res.send(output);
