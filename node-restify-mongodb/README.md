@@ -6,7 +6,7 @@
 [node-restify](https://github.com/mcavage/node-restify) - Restful <br/>
 [mongodb](http://www.mongodb.org/) - DB <br/>
 [mongoose](http://mongoosejs.com/) - node CRUD db  <br/>
-[??](??) - Api Documentation
+[swagger](https://helloreverb.com/developers/swagger) [APIDOC](http://apidocjs.com/) - Api Documentation
 [??](??) - Api Test Tools (page)
 
 mongodb host
