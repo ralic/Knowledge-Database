@@ -12,6 +12,8 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "mongoose": "^3.8.15",
+    "passport": "^0.2.1",
+    "passport-facebook": "^1.0.3",
     "restify": "^2.8.2"
   }
 }
