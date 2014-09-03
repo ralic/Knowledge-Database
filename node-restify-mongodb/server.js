@@ -38,22 +38,33 @@ server.listen(HTTP_PORT, function () {
 });
 
 // ==================
-// auth facebook
+// passport config
 // ==================
-var passport = require('passport'),
-    FacebookStrategy = require('passport-facebook').Strategy;
+var passport = require('passport');
+var SERVER_PREFIX = 'http://localhost:' + HTTP_PORT + '/';
+server.use(passport.initialize());
+server.use(passport.session());
+passport.serializeUser(function(user, done) {
+    done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+    done(null, user);
+});
+
+// ==================
+// auth passport-facebook
+// ==================
+var FacebookStrategy = require('passport-facebook').Strategy;
 var FB_LOGIN_PATH = 'auth/facebookLogin';
 var FB_CALLBACK_PATH = 'auth/facebookCallback';
 var FB_APPID = 'xxx';
 var FB_APPSECRET = 'xxx';
-var SERVER_PREFIX = 'http://localhost:' + HTTP_PORT + '/';
 var FB_PERMISSION = {
     session: true,
     scope: ['email'] // add more permission here
 };
 
-server.use(passport.initialize());
-server.use(passport.session());
 passport.use(new FacebookStrategy({
         clientID: FB_APPID,
         clientSecret: FB_APPSECRET,
@@ -66,13 +77,27 @@ passport.use(new FacebookStrategy({
     })
 );
 
-passport.serializeUser(function(user, done) {
-    done(null, user);
-});
+// ==================
+// auth passport-twitter - doesn't work on restify but should work on express
+// ==================
+var TwitterStrategy = require('passport-twitter').Strategy;
+var TWITTER_LOGIN_PATH = 'auth/twitterLogin';
+var TWITTER_CALLBACK_PATH = 'auth/twitterCallback';
+var TWITTER_CONSUMER_KEY = 'xxx';
+var TWITTER_CONSUMER_SECRET = 'xxx';
 
-passport.deserializeUser(function(user, done) {
-    done(null, user);
-});
+passport.use(new TwitterStrategy({
+        consumerKey: TWITTER_CONSUMER_KEY,
+        consumerSecret: TWITTER_CONSUMER_SECRET,
+        callbackURL: SERVER_PREFIX + TWITTER_CALLBACK_PATH
+    },
+    function(token, tokenSecret, profile, done) {
+        console.log(profile);
+        console.log('accessToken=' + accessToken + ' facebookId=' + profile.id);
+        // configure the twitter data
+        return done(null, profile);
+    }
+));
 
 // ==================
 // start CURD =>
@@ -95,7 +120,13 @@ server.put('/update', require('./put/update'));
 server.del('delete/:name', require('./del/delete'));
 
 // auth
+// facebook
 // http://localhost:8080/auth/facebookLogin
 // http://localhost:8080/auth/facebookCallback
 server.get(FB_LOGIN_PATH, passport.authenticate('facebook', FB_PERMISSION));
 server.get(FB_CALLBACK_PATH, passport.authenticate('facebook', FB_PERMISSION),require('./auth/facebookCallback'));
+// twitter
+// http://localhost:8080/auth/twitterLogin
+// http://localhost:8080/auth/twitterCallback
+server.get(TWITTER_LOGIN_PATH, passport.authenticate('twitter', { session: true}));
+server.get(TWITTER_CALLBACK_PATH, passport.authenticate('twitter', { session: true}),require('./auth/twitterCallback'));
