@@ -102,9 +102,23 @@ passport.use(new TwitterStrategy({
 // ==================
 // start CURD =>
 // ==================
-
-// GET
-// curl http://localhost:8080/kitty
+/**
+ * @api {get} /kitty Request Kitty information
+ * @apiName GetKitty
+ * @apiGroup Kitty
+ *
+ *
+ * @apiSuccess {String} name name of the kitty
+ * @apiSuccess {String} age  the kitty's age
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ *     [{
+ *       "name": "Hello Kitty",
+ *       "age": 12
+ *     }]
+ *
+ */
 server.get('/kitty', require('./get/kitty'));
 
 // POST
