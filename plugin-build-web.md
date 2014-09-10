@@ -31,6 +31,9 @@ Collection of Building Web
 ###Parallex Scroll###
 1. [stellar.js](https://github.com/markdalgleish/stellar.js)
 
+###Scroll Bar CSS###
+1. [Custom Scrollbars in Webkit](http://css-tricks.com/custom-scrollbars-in-webkit/)
+
 ###Background Color / Image###
 
 1. [jquery.adaptive-backgrounds](https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
