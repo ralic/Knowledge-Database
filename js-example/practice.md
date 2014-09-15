@@ -35,3 +35,21 @@ function getSelectionText() {
     return text;
 }
 ```
+
+##use strict##
+
+http://www.w3schools.com/js/js_strict.asp
+
+The following is not allowed
+
+1. Using a variable without declare
+2. Deleting a variable, a function, or an argument
+3. Define a property more than once
+4. Duplicating a parameter, name
+5. Octal numeric literals and escape characters
+6. Writing to a read-only/get-only property
+7. Delete an undeletable property (eg: delete Object.property)
+8. The string 'eval', 'argument'
+9. with statement (with (Math){x = cos(2)};)
+10. Reserved words
+
