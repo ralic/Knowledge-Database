@@ -1,3 +1,7 @@
+###Faster your google maps
+
+1. [Too many Markers](https://developers.google.com/maps/articles/toomanymarkers?csw=1#gridbasedclustering)
+
 ###Google Maps Url with lat/long/zoom
 
 ```
@@ -88,4 +92,27 @@ function clearMarker() {
         lastCallInfoWindow.close();
     }
 }
+```
+
+###Marker Cluster
+
+```js
+// http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0/docs/reference.html
+var center = new google.maps.LatLng(37.4419, -122.1419);
+var options = {
+  'zoom': 13,
+  'center': center,
+  'mapTypeId': google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("map"), options);
+
+var markers = [];
+for (var i = 0; i < 100; i++) {
+  var latLng = new google.maps.LatLng(data.photos[i].latitude,
+      data.photos[i].longitude);
+  var marker = new google.maps.Marker({'position': latLng});
+  markers.push(marker);
+}
+var markerCluster = new MarkerClusterer(map, markers);
 ```
