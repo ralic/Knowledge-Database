@@ -2,6 +2,10 @@
 
 1. [Too many Markers](https://developers.google.com/maps/articles/toomanymarkers?csw=1#gridbasedclustering)
 
+###Google Maps Library
+
+https://code.google.com/p/google-maps-utility-library-v3/
+
 ###Google Maps Url with lat/long/zoom
 
 ```
