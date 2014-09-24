@@ -61,6 +61,7 @@ Collection of Building Web
 ###Loading###
 1. [pace](https://github.com/HubSpot/pace)
 2. [ngProgress](http://victorbjelkholm.github.io/ngProgress/) - angular solution
+3. [angular-loading-bar](https://github.com/chieffancypants/angular-loading-bar)
 
 ###SVG icon###
 1. [geomicons-open](https://github.com/jxnblk/geomicons-open)
