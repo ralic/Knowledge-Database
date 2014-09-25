@@ -94,6 +94,16 @@ Web Framework (form awesome-nodejs
 8. [Derby](https://github.com/derbyjs/derby) - MVC framework, making it easy to write realtime, collaborative applications that run in both Node.js and browsers.
 9. [Interfake](https://github.com/basicallydan/interfake) - Rapid prototyping framework for making mock HTTP APIs, with a Node, command-line and HTTP interface.
 
+REST API Framework [#](http://nodeframework.com/index.html#rest-api)
+
+1. actionHero.js
+2. Frisby
+3. restify
+4. restmvc
+5. percolator
+6. LoopBack
+7. Fortune.js
+
 Version Control
 
 1. Mercurial
