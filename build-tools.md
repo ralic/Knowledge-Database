@@ -82,6 +82,18 @@ Full Stack Framework
 3. [loopback](https://github.com/strongloop/loopback) - 強 ...
 4. [Meteor](https://www.meteor.com/)
 
+Web Framework (form awesome-nodejs
+
+1. [Koa](http://koajs.com) - A new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs.
+2. [Express](http://expressjs.com) - A minimal and flexible web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
+3. [Hapi](http://hapijs.com) - A rich framework for building applications and services.
+4. [LoopBack](http://loopback.io) - Powerful framework for creating REST APIs and easily connecting to backend data sources.
+5. [Meteor](https://www.meteor.com) - An ultra-simple, database-everywhere, data-on-the-wire, pure-Javascript web framework.
+6. [SailsJS](http://sailsjs.org) - An MVC web framework with a modern twist, supporting WebSockets, streams, and a data-driven API.
+7. [Restify](http://mcavage.me/node-restify/) - A node framework built specifically to enable you to build correct REST web services.
+8. [Derby](https://github.com/derbyjs/derby) - MVC framework, making it easy to write realtime, collaborative applications that run in both Node.js and browsers.
+9. [Interfake](https://github.com/basicallydan/interfake) - Rapid prototyping framework for making mock HTTP APIs, with a Node, command-line and HTTP interface.
+
 Version Control
 
 1. Mercurial
