@@ -16,9 +16,17 @@ Array.prototype.duplicate = function () {
 for (var i=0;i<=3;i++){
     setTimeout(console.log(i), 0);
 }
+// or this
+for (var i=0;i<=3;i++){
+    var f = function () {
+        console.log(i);
+    }
+    setTimeout(f(),0);
+}
+
 // 4 4 4 4
 for (var i=0;i<=3;i++){
-    setTimout(function () { console.log(i), 0);
+    setTimeout(function () { console.log(i); }, 0);
 }
 ```
 
