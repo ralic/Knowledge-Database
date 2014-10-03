@@ -67,10 +67,10 @@ There are different result from browser chrome/firefox [question](http://stackov
 
 ```js
 // chrome
-var a1 = new Date('2015-07-17T03:00:00Z'); // UTC => Fri Jul 17 2015 11:00:00 GMT+0800 (CST)
-var b1 = new Date('2014-10-01T07:19:33.657'); // UTC => Wed Oct 01 2014 15:19:33 GMT+0800 (CST)
+var a1 = new Date('2015-07-17T03:00:00Z'); // toISOString => 2015-07-17T03:00:00.000Z
+var b1 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-10-01T07:19:33.657Z
 
 // firefox
-var a2 = new Date('2015-07-17T03:00:00Z'); // => Date 2015-07-17T03:00:00.000Z (THIS NO UTC+8!!!! )
-var b2 = new Date('2014-10-01T07:19:33.657'); // => Date 2014-09-30T23:19:33.657Z
+var a2 = new Date('2015-07-17T03:00:00Z'); // toISOString => 2015-07-17T03:00:00.000Z
+var b2 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-09-30T23:19:33.657Z (wat!)
 ```
