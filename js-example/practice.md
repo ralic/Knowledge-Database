@@ -63,9 +63,9 @@ The following is not allowed
 
 ##new Date()##
 
-There are different result from browser chrome/firefox
+There are different result from browser chrome/firefox [question](http://stackoverflow.com/questions/15109894/new-date-works-differently-in-chrome-and-firefox)
 
-```
+```js
 // chrome
 var a1 = new Date('2015-07-17T03:00:00Z'); // UTC => Fri Jul 17 2015 11:00:00 GMT+0800 (CST)
 var b1 = new Date('2014-10-01T07:19:33.657'); // UTC => Wed Oct 01 2014 15:19:33 GMT+0800 (CST)
