@@ -124,6 +124,7 @@ SYMBOLIC_CONSTANTS_LIKE_THIS;
 
 ###快速開發###
 1. bootstrap
+2. [Jasny Bootstrap](http://jasny.github.io/bootstrap/) - extend bootstrap
 2. zurb foundation
 3. [Amaze UI](http://amazeui.org/) - 中國版的 bootstrap - Amaze UI 专注解决中文排版优化问题，根据操作系统调整字体，实现最佳中文排版效果；针对国内主流浏览器及 App 内置
 
