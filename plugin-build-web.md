@@ -132,3 +132,6 @@ SYMBOLIC_CONSTANTS_LIKE_THIS;
 1. [richsnippets](https://developers.google.com/webmasters/richsnippets/)
 2. [Google Analytics Resource](http://www.startdo.tw/google-analytics/52-google-analytics-resources/)
 3. [Open Graph og:](http://ogp.me/)
+
+###ie 8 tools###
+1. [ie8.js](https://github.com/WebReflection/ie8)
