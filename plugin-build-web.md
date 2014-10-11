@@ -51,6 +51,7 @@ Collection of Building Web
 8. [messenger](http://github.hubspot.com/messenger/)
 9. [html5-desktop-notification](https://github.com/ttsvetko/HTML5-Desktop-Notifications)
 10. [sweetalert](https://github.com/t4t5/sweetalert)
+11. [NotificationStyles](https://github.com/codrops/NotificationStyles)
 
 ###Syntax Highlighter###
 1. [Prism](syntax highlighter)
