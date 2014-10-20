@@ -166,3 +166,12 @@ var latlng = new google.maps.LatLng(lat, lng);
     });
 }
 ```
+
+###geo data for meta tag
+
+```html
+<meta name="ICBM" content="25.0392,121.524994" />
+<meta name="geo.position" content="25.0392;121.524994" />
+<meta name="geo.placename" content="Taipei, 03, tw" />
+<meta name="geo.region" content="TW-03" />
+```
