@@ -74,3 +74,21 @@ var b1 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-10-01T07:19
 var a2 = new Date('2015-07-17T03:00:00Z'); // toISOString => 2015-07-17T03:00:00.000Z
 var b2 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-09-30T23:19:33.657Z (wat!)
 ```
+
+##Flatten##
+```js
+Array.prototype.flatten = function () {
+    var array = this;
+    var temp = [];
+    for (var i = 0, length = array.length;i<length;i++) {
+        if (typeof array[i] === 'object') { // array
+            temp = temp.concat(array[i].flatten());
+        } else { // string or int
+            temp.push(array[i]);
+        }
+    }
+    return temp;
+}
+var array = [1, [2, [ [3, 4], 5], 6]].flatten();
+// => [1, 2, 3, 4, 5, 6]
+```
