@@ -10,7 +10,7 @@ Array.prototype.duplicate = function () {
 };
 ```
 
-##Array.prototype.reduce##
+##Array.prototype.unique##
 ```js
 Array.prototype.unique = function() {
     var unique = [];
