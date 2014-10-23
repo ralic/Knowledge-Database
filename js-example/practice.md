@@ -10,6 +10,27 @@ Array.prototype.duplicate = function () {
 };
 ```
 
+##Array.prototype.reduce##
+```js
+Array.prototype.unique = function() {
+    var unique = [];
+    for (var i = 0; i < this.length; i++) {
+        if (unique.indexOf(this[i]) == -1) {
+            unique.push(this[i]);
+        }
+    }
+    return unique;
+};
+
+// or function method
+var arrayUnique = function(a) {
+    return a.reduce(function(p, c) {
+        if (p.indexOf(c) == -1) p.push(c);
+        return p;
+    }, []);
+};
+```
+
 ##setTimeout##
 ```js
 // 0 1 2 3
