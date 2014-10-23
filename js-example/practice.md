@@ -29,6 +29,8 @@ var arrayUnique = function(a) {
         return p;
     }, []);
 };
+
+// jsPerf http://jsperf.com/array-filter-unique/13
 ```
 
 ##setTimeout##
