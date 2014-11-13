@@ -115,3 +115,20 @@ Array.prototype.flatten = function () {
 var array = [1, [2, [ [3, 4], 5], 6]].flatten();
 // => [1, 2, 3, 4, 5, 6]
 ```
+
+##To Fixed Not Rounding##
+```js
+Number((value).toString().match(/^\d+(?:\.\d{0,2})?/))
+
+// value
+// 12 => 12
+// 12. => 12
+// 12.00 => 12
+// 12.1 => 12.1
+// 12.21 =>  12.21
+// 12.2199 => 12.21
+// 12.21001 => 12.21
+
+// what if rounding (2)
+parseFloat(value).toFixed(2)
+```
