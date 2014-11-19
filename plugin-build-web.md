@@ -57,6 +57,9 @@ Collection of Building Web
 1. [Prism](syntax highlighter)
 2. [Rainbow](https://github.com/ccampbell/rainbow)
 
+###Date/Time Picker###
+1. [pickadate](https://github.com/amsul/pickadate.js)
+
 ###Count Down###
 1. [FlipClock](https://github.com/objectivehtml/FlipClock)
 
