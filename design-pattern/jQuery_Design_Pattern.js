@@ -39,7 +39,7 @@
  * The Observer pattern is where the objects in a system may subscribe to other objects and be notified by them when an event of interest occurs.
  */
  
- $( document ).on('something, function () {});
+ $( document ).on('something', function () {});
  $( document ).trigger('something');
  
  // or
