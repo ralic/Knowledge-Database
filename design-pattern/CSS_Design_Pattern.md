@@ -39,3 +39,38 @@ SMACSS
 <!-- this is a include theme -->
 <link rel="stylesheet" href="xmas-theme.css"/>
 ```
+
+OOCSS
+===
+
+Purpose
+
+**Code reuse**
+
+**Maintainable**
+
+**Standards-based**
+
+**Fast**
+
+Principle
+
+**Separate structure and skin**
+
+Mix and Match with your various object
+
+```html
+<a class="btn"></a>
+<button class="btn"></button>
+<!-- should be the same style button -->
+```
+
+Using class name instead of tags name after an class name
+
+**Seperate container and content**
+
+Content set every where is same
+
+Think carefully about your class used !!!!!
+
+Don't use ID as css selector
