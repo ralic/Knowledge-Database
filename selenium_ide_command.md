@@ -1,5 +1,9 @@
  
- original from [http://seleniummaster.com/sitecontent/index.php/selenium-ide/114-selenium-ide-complete-list-of-commands](http://seleniummaster.com/sitecontent/index.php/selenium-ide/114-selenium-ide-complete-list-of-commands)
+ original from <br/>
+[http://seleniummaster.com/sitecontent/index.php/selenium-ide/114-selenium-ide-complete-list-of-commands](http://seleniummaster.com/sitecontent/index.php/selenium-ide/114-selenium-ide-complete-list-of-commands)
+ 
+ full list from selenium reference 1.0.1<br/>
+ http://release.seleniumhq.org/selenium-core/1.0.1/reference.html
  
 | # | Commands | Usage
 |:---------:|:------------:|:------------:
