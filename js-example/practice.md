@@ -96,6 +96,10 @@ var b1 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-10-01T07:19
 // firefox
 var a2 = new Date('2015-07-17T03:00:00Z'); // toISOString => 2015-07-17T03:00:00.000Z
 var b2 = new Date('2014-10-01T07:19:33.657'); // toISOString => 2014-09-30T23:19:33.657Z (wat!)
+
+// Date.prototype,toISOString
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+// ISO format (ISO 8601 Extended Format), which can be described as follows: YYYY-MM-DDTHH:mm:ss.sssZ
 ```
 
 ##Flatten##
