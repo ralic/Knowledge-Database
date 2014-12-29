@@ -104,6 +104,10 @@ REST API Framework [#](http://nodeframework.com/index.html#rest-api)
 6. LoopBack
 7. Fortune.js
 
+API Doc
+
+1. [Mashape](https://www.mashape.com/)
+2. [Apiary](http://apiary.io/)
 Version Control
 
 1. Mercurial
