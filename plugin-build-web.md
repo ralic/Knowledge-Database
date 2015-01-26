@@ -18,6 +18,10 @@ Collection of Building Web
 ###Header Footer Fix###
 1. [headroom](https://github.com/WickyNilliams/headroom.js) - cool
 
+###Carousel###
+1. [owlcarousel](http://owlgraphic.com/owlcarousel/index.html)
+2. [slick.js](http://kenwheeler.github.io/slick/)
+
 ###On scroll Animation###
 
 1. [scrollReveal](https://github.com/julianlloyd/scrollReveal.js)
