@@ -108,6 +108,9 @@ Collection of Building Web
 ###Data Query###
 1. [linq](http://linqjs.codeplex.com/) - LINQ for JavaScript
 
+###XSS###
+1. [XSS javascript](http://jsxss.com/)
+
 ###Javascript Script Coding Style###
 - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
 - [jQuery Core Style Guidelines](http://docs.jquery.com/JQuery_Core_Style_Guidelines)
