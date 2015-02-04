@@ -105,6 +105,10 @@ Collection of Building Web
 ###QR code###
 1. [qr-code](https://github.com/educastellano/qr-code) - Web Component for generating QR codes
 
+###Two way Binding###
+1. [Generic Data Binder](http://gdb.thewebdev.guru/)
+2. [jquerymv](http://jquerymy.com/)
+
 ###Data Query###
 1. [linq](http://linqjs.codeplex.com/) - LINQ for JavaScript
 
