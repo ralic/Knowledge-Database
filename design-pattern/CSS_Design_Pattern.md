@@ -1,4 +1,4 @@
-example: SMACSS OOCSS
+example: SMACSS OOCSS BEM
 
 SMACSS
 ===
@@ -74,3 +74,13 @@ Content set every where is same
 Think carefully about your class used !!!!!
 
 Don't use ID as css selector
+
+
+BEM
+===
+
+Block - `.component`
+
+Element - `.component__sub-part`
+
+Modifier - `.component--variation`
