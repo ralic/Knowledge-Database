@@ -1,7 +1,7 @@
 Masking-Tape-Canvas - Beta 0.1 (Fuzzy Beta)
 ===================
 
-Design your Masking Tape in Canvas [DEMO](http://huei90.github.io/F2E-Knowledge-Database-by-Huei/some-example/Masking-Tape-Canvas/index.html)
+Design your Masking Tape in Canvas [DEMO](http://huei90.github.io/Knowledge-Database/some-example/Masking-Tape-Canvas/index.html)
 
 Masking Tape Designer
 =====================

@@ -5,7 +5,7 @@ Do you know that you can do more in **window.setInterval()** ?
 
 Inspired by angularjs [$interval](https://docs.angularjs.org/api/ng/service/$interval)
 
-[DEMO](http://huei90.github.io/F2E-Knowledge-Database-by-Huei/some-example/interval.js/index.html)
+[DEMO](http://huei90.github.io/Knowledge-Database/some-example/interval.js/index.html)
 
 Example
 ===
