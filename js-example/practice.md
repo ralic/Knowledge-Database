@@ -142,3 +142,10 @@ parseFloat(value).toFixed(2)
 ```js
 parseFloat((value).toFixed(2))
 ```
+
+```js
+Number.prototype.toFixed = function(precision) {
+    var power = Math.pow(10, precision || 0);
+    return String(Math.round(this * power)/power);
+}
+```
