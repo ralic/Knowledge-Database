@@ -136,3 +136,9 @@ Number((value).toString().match(/^\d+(?:\.\d{0,2})?/))
 // what if rounding (2)
 parseFloat(value).toFixed(2)
 ```
+
+##To Fixed But Keep Integer
+
+```js
+parseFloat((value).toFixed(2))
+```
