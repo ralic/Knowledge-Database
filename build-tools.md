@@ -62,7 +62,8 @@ get badge for your repo
 6. [waffle.io](https://waffle.io/) - visualization your issue/PR
 7. [PyPI](https://pypip.in/) - Severals of Badge
 8. [shields](http://shields.io/) - Many Badges
-9. more ...
+9. [Issue Stats](http://issuestats.com) - Analyze and compare how long it takes for Github issues to be closed.
+10. more ...
 
 CI and badge
 
