@@ -28,5 +28,11 @@ Summary
  8. [Leaning expressjs with google maps](https://github.com/huei90/Knowledge-Database/tree/master/google-maps-v3)
  9. [Learning SVG](https://github.com/huei90/Knowledge-Database/tree/master/svg-example)
 
+###Algorithm Pratice
+
+ 1. https://github.com/karan/Projects-Solutions
+ 2. https://github.com/karan/Projects-Solutions
+ 3. https://github.com/quitrk/LearningJS
+
 ###Writing
 https://github.com/huei90/Knowledge-Database/issues
