@@ -30,6 +30,11 @@ var arrayUnique = function(a) {
     }, []);
 };
 
+// fastest solution
+array.filter(function (element, index, array) {
+    return element in this ? false : this[element] = true;
+}, {});
+
 // jsPerf http://jsperf.com/array-filter-unique/13
 ```
 
