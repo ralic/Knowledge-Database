@@ -63,7 +63,8 @@ get badge for your repo
 7. [PyPI](https://pypip.in/) - Severals of Badge
 8. [shields](http://shields.io/) - Many Badges
 9. [Issue Stats](http://issuestats.com) - Analyze and compare how long it takes for Github issues to be closed.
-10. more ...
+10. [Code Climate](https://codeclimate.com/) - Automated code review for Ruby, JS, PHP and Python.
+11. more ...
 
 CI and badge
 
