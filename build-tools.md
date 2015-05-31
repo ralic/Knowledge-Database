@@ -110,9 +110,16 @@ API Doc
 
 1. [Mashape](https://www.mashape.com/)
 2. [Apiary](http://apiary.io/)
+
 Version Control
 
 1. Mercurial
 2. Git
 3. Subversion
 4. Bazaar
+
+Learn Algorithm
+
+1. codefights
+2. https://www.hackerrank.com
+3. http://www.interviewbit.com/
