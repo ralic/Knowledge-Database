@@ -66,7 +66,8 @@ get badge for your repo
 10. [Code Climate](https://codeclimate.com/) - Automated code review for Ruby, JS, PHP and Python.
 11. [Is It Maintained](http://isitmaintained.com) - Check the activity of open source projects
 13. [Documentation](http://inch-ci.org) - Documentation badges  
-14. more ...
+14. [For the Badge](https://github.com/BraveUX/for-the-badge)  - Badges for badges' sake
+15. more ... https://github.com/boennemann/badges 
 
 CI and badge
 
