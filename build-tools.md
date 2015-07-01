@@ -8,7 +8,8 @@ Some build tools for frontend development.
 4. [Brunch](http://brunch.io/) - Brunch is an ultra-fast HTML5 build tool
 5. [Mimosa](http://mimosa.io/) - A LIGHTNING-FAST BUILD TOOL FOR MODERN WEB DEVELOPMENT
 6. [Modjs](http://madscript.com/modjs/) - Modern Workflow Tooling For Web
-7. etc.. will add if found a new one
+7. [fly](https://github.com/flyjs/fly) - New Generation Build System
+8. etc.. will add if found a new one
 
 
 advanced
