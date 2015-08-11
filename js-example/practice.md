@@ -123,6 +123,11 @@ Array.prototype.flatten = function () {
 }
 var array = [1, [2, [ [3, 4], 5], 6]].flatten();
 // => [1, 2, 3, 4, 5, 6]
+
+// easiest way to implement
+Array.prototype.flatten = function () {
+    return (this+'').split(',');
+}
 ```
 
 ##To Fixed Not Rounding##
