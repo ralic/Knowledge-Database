@@ -52,6 +52,7 @@ social network / code resource for IT
 13. [gitlab](https://gitlab.com/)
 14. [w3ctech](http://www.w3ctech.com/) - 中国最大的前端技术社区 ? he said
 15. [伯乐在线](http://www.jobbole.com/) - 伯乐在线
+16. [SegmentFault](http://segmentfault.com/)
 16. more ...
 
 get badge for your repo
